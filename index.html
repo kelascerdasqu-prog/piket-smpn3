@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistem Rekap Piket Online - SMPN 3 Samalanga</title>
-    <!-- Menghubungkan ke file tampilan CSS -->
+    <title>Input Piket - SMPN 3 Samalanga</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -13,32 +12,13 @@
     <h2>Sistem Rekap Guru Piket &amp; Honor Invaler</h2>
     <p><strong>SMP Negeri 3 Samalanga</strong> - Tahun Pelajaran 2026/2027</p>
     
-    <div id="statusLoading" class="loading">Memuat data dari Google Sheets... silakan tunggu.</div>
-
-    <div class="panel-kontrol">
-        <div class="tarif-box">
-            Tarif Honor per JTM: Rp <input type="number" id="tarif" value="20000" style="width: 80px; padding: 3px;" onchange="hitungRekap()">
-        </div>
-        
-        <div class="filter-box">
-            <label for="filterBulan" style="margin: 0; color: #0c5460;">Pilih Bulan Rekap:</label>
-            <select id="filterBulan" onchange="hitungRekap()" style="padding: 5px;">
-                <option value="ALL">-- Semua Bulan --</option>
-                <option value="01">Januari</option>
-                <option value="02">Februari</option>
-                <option value="03">Maret</option>
-                <option value="04">April</option>
-                <option value="05">Mei</option>
-                <option value="06">Juni</option>
-                <option value="07">Juli</option>
-                <option value="08">Agustus</option>
-                <option value="09">September</option>
-                <option value="10">Oktober</option>
-                <option value="11">November</option>
-                <option value="12">Desember</option>
-            </select>
-        </div>
+    <!-- MENU NAVIGASI HALAMAN -->
+    <div class="nav-menu">
+        <a href="index.html" class="nav-link active">📝 Input Harian</a>
+        <a href="rekap.html" class="nav-link">📊 Lihat Rekap Bulanan</a>
     </div>
+    
+    <div id="statusLoading" class="loading">Memuat data dari Google Sheets... silakan tunggu.</div>
 
     <h3>1. Input Tugas Guru Ganti (Harian)</h3>
     <div class="form-group">
@@ -114,41 +94,8 @@
             <tbody id="tabelHarian"></tbody>
         </table>
     </div>
-
-    <div class="grid-rekap">
-        <div>
-            <h3>3. Rekap Bulanan Guru Piket (Penerima Uang)</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Kode</th>
-                        <th>Nama Guru Piket</th>
-                        <th>Total JTM</th>
-                        <th>Total Diterima</th>
-                    </tr>
-                </thead>
-                <tbody id="tabelRekapPiket"></tbody>
-            </table>
-        </div>
-
-        <div>
-            <h3>4. Rekap Bulanan Guru Absen (Pembayar Uang)</h3>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Kode</th>
-                        <th>Nama Guru Absen</th>
-                        <th>Total JTM Absen</th>
-                        <th>Total Harus Dibayar</th>
-                    </tr>
-                </thead>
-                <tbody id="tabelRekapAbsen"></tbody>
-            </table>
-        </div>
-    </div>
 </div>
 
-<!-- Menghubungkan ke file logika hitungan JS -->
 <script src="app.js"></script>
 </body>
 </html>
