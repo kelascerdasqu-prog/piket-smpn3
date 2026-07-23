@@ -1,0 +1,41 @@
+body { font-family: 'Segoe UI', sans-serif; margin: 20px; background-color: #f4f6f9; color: #333; }
+.container { max-width: 1100px; margin: auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 4px 6px rgba(0,0,0,0.1); }
+h2, h3 { color: #2c3e50; margin-top: 0; }
+
+/* CSS FORM PER BARIS (VERTIKAL) */
+.form-group { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 15px; 
+    margin-bottom: 20px; 
+    background: #eef2f3; 
+    padding: 20px; 
+    border-radius: 6px; 
+}
+.form-group div {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.form-group button {
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #27ae60; color: white; border: none; cursor: pointer; font-weight: bold; border-radius: 4px;
+}
+.form-group button:disabled { background-color: #bdc3c7; cursor: not-allowed; }
+
+label { font-size: 13px; font-weight: bold; color: #555; }
+input, select { padding: 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; }
+
+table { width: 100%; border-collapse: collapse; margin-top: 10px; background: white; font-size: 14px; margin-bottom: 20px; }
+th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+th { background-color: #2c3e50; color: white; }
+tr:nth-child(even) { background-color: #f9f9f9; }
+
+.panel-kontrol { display: flex; flex-wrap: wrap; gap: 15px; margin-bottom: 20px; align-items: center; }
+.tarif-box { font-weight: bold; background: #fff3cd; padding: 10px; border-radius: 4px; border-left: 5px solid #ffc107; }
+.filter-box { font-weight: bold; background: #d1ecf1; padding: 10px; border-radius: 4px; border-left: 5px solid #17a2b8; display: flex; align-items: center; gap: 10px; }
+.loading { color: #e67e22; font-weight: bold; margin-bottom: 15px; }
+
+.grid-rekap { display: grid; grid-template-columns: repeat(auto-fit, minmax(450px, 1fr)); gap: 20px; }
