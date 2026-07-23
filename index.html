@@ -210,23 +210,21 @@
             document.getElementById('btnTambah').disabled = false;
         }
     }
-
     function perbaruiTabelHarian() {
-        const tbody = document.getElementById('tabelHarian');
-        tbody.innerHTML = "";
-        dataPiket.forEach(data => {
-            let row = `<tr>
-                <td>${konversiTanggal(data.tgl)}</td>
-                <td>${data.kelas}</td>
-                <td>${data.jamKe}</td>
-                <td>${data.guruAbsen}</td>
-                <td><strong>${data.guruPiket}</strong></td>
-                <td>${data.jtm} JTM</td>
-            </tr>`;
-            tbody.innerHTML += row;
-        });
-    }
-
+    const tbody = document.getElementById('tabelHarian');
+    tbody.innerHTML = "";
+    dataPiket.forEach(data => {
+        let row = `<tr>
+            <td>${konversiTanggal(data.tgl)}</td>
+            <td>${data.kelas}</td>
+            <td>${data.jamKe}</td>
+            <td><strong>${data.guruAbsen}</strong></td>
+            <td><strong>${data.guruPiket}</strong></td>
+            <td>${data.jtm} JTM</td>
+        </tr>`;
+        tbody.innerHTML += row;
+    });
+}
     function hitungRekap() {
         const tbody = document.getElementById('tabelRekap');
         const tarif = parseInt(document.getElementById('tarif').value) || 0;
